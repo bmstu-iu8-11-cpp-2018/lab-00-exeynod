@@ -1,18 +1,6 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required(VERSION 3.14)
+project(lab_00_exeynod)
 
-include(gtest.cmake)
-include_directories(SYSTEM
-    ./
-)
+set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_FLAGS 
-"${CMAKE_CXX_FLAGS} -std=c++11 -O1 -fsanitize=address -Wall -Wextra -Wno-unused-command-line-argument -Wshadow -Wnon-virtual-dtor -pedantic"
-)
-
-
-# enum your files
-add_executable(executable
-
-)
-find_package (Threads)
-target_link_libraries(executable -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
+add_executable(lab_00_exeynod main.cpp)
